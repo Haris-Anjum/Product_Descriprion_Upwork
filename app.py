@@ -55,7 +55,6 @@ if st.session_state.current_page == "Page 1":
             st.session_state["product_name"] = product_name
         else:
             product_id = st.session_state["product_id"]
-            st.write(f"Using existing Product ID: {product_id}")
         # Check if a description has already been generated in this session
         if "generated_description" not in st.session_state and product_id:
             # Create the OpenAI prompt
