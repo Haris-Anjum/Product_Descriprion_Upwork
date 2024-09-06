@@ -3,6 +3,7 @@ import sqlite3
 from openai import OpenAI
 from streamlit_sortables import sort_items
 import re
+import os
 
 # Set your OpenAI API key
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
