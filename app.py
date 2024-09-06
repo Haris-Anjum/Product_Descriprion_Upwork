@@ -920,10 +920,10 @@ if st.session_state.current_page == "Page 2":
                     # Remove the description from the sorted list
                     sorted_descriptions.pop(idx)
                     st.session_state["sorted_descriptions"] = sorted_descriptions  # Update session state
-                    st.experimental_rerun()  # Rerun to update the UI
+                    st.rerun()  # Rerun to update the UI
 
         # Layout with two columns for buttons
-        col1, col2 = st.columns([8, 2])  # Adjust column widths as needed
+        col1, col2 = st.columns([8, 3])  # Adjust column widths as needed
 
         with col1:
             if st.button("Save Priorities to Database"):
