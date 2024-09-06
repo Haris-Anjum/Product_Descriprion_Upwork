@@ -5,7 +5,8 @@ from streamlit_sortables import sort_items
 import re
 
 # Set your OpenAI API key
-client = OpenAI(api_key="sk-WnOdjvQuExa-P2yQ7dAnCcW6pNF2IfxlK3J-h9Zvi6T3BlbkFJ_WOmJdEzCAgEmdVN155rlemmxR0AFoLnYHPpMSSR8A")
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
 # Database connection function
 def get_db_connection():
